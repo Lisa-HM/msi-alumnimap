@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>MSI AlumniMap</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #005293;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 20px;
+      color: #005293;
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #005293;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a.button:hover {
+      background-color: #003f70;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="file"] {
+      margin-top: 8px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #005293;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #003f70;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MSI AlumniMap 
+
+– Studienorientierung durch echte Werdegänge</h1>
+    <p>
+      Das Projekt <strong>AlumniMap</strong> ist ein Forschungs- und Entwicklungsprojekt der Hochschule München.  
+      Unser Ziel: Studieninteressierten im Studiengang <strong>Management Sozialer Innovationen (MSI)</strong> Orientierung geben –  
+      durch echte, vielfältige Werdegänge von Alumni.
+    </p>
+
+    <p>
+      Dafür erfassen und analysieren wir akademische und berufliche Stationen ehemaliger MSI-Studierender – aggregiert und pseudonymisiert.  
+      Je mehr Alumni mitmachen, desto aussagekräftiger wird das Bild, das wir künftigen Studierenden zeigen können.
+    </p>
+
+    <h2>🔗 Einfach & sicher: Mit LinkedIn anmelden</h2>
+    <p>
+      Über LinkedIn erhalten wir – <strong>nur mit deiner Zustimmung</strong> – Zugriff auf öffentlich sichtbare Angaben deines Profils (z. B. Name, aktuelle Position, Branche, Ort).
+      Diese Informationen werden <strong>pseudonymisiert</strong> gespeichert und fließen ausschließlich in <strong>statistische Auswertungen</strong> ein.
+      Rückschlüsse auf Einzelpersonen sind ausgeschlossen.
+    </p>
+    <a href="/auth/linkedin" class="button">➡️ Mit LinkedIn anmelden</a>
+
+    <h2>✨ Noch kein LinkedIn-Konto?</h2>
+    <p>
+      Wir empfehlen dir, ein Profil bei LinkedIn anzulegen – das ist nicht nur hilfreich für dieses Projekt,  
+      sondern auch für deine berufliche Zukunft.
+    </p>
+    <a href="https://www.linkedin.com/signup" target="_blank" class="button">🆕 LinkedIn-Konto erstellen</a>
+
+    <h2>📄 Alternativ: Lebenslauf (PDF) hochladen</h2>
+    <p>
+      Falls du (noch) kein LinkedIn nutzt, kannst du uns auch deinen Lebenslauf schicken. Auch diese Daten fließen anonymisiert in unsere Auswertung ein.
+    </p>
+    
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <label for="cv">PDF-Datei auswählen:</label>
+      <input type="file" name="cv" accept=".pdf" required>
+
+      <label style="margin-top: 15px;">
+        <input type="checkbox" required>
+        Ich stimme zu, dass mein Lebenslauf im Rahmen des Hochschulprojekts <em>AlumniMap</em> verarbeitet und anonymisiert ausgewertet werden darf.
+      </label>
+
+      <button type="submit">📤 Lebenslauf hochladen</button>
+    </form>
+  </div>
+</body>
+</html>
+
